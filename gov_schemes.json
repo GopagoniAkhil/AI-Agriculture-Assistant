@@ -1,0 +1,210 @@
+{
+  "schemes": [
+    {
+      "id": 1,
+      "name": "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)",
+      "type": "subsidy",
+      "level": "central",
+      "description": "Comprehensive scheme ensuring water availability for irrigation with focus on every farm reaching water",
+      "eligibility": "All farmers owning agricultural land with irrigation facilities or potential",
+      "benefits": [
+        "Up to 80% subsidy on irrigation infrastructure",
+        "Technical support and training",
+        "Access to micro-irrigation technologies",
+        "Water management advisory services"
+      ],
+      "benefit": "Up to 80% subsidy on irrigation infrastructure + technical support",
+      "documents": [
+        "Aadhar Card",
+        "Land Revenue Records",
+        "Bank Account Details",
+        "Passport-size photographs"
+      ],
+      "deadline": "2024-12-31",
+      "contactPhone": "011-XXXX-XXXX",
+      "contactEmail": "pmksy@agriculture.gov.in",
+      "website": "https://pmksy.gov.in"
+    },
+    {
+      "id": 2,
+      "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+      "type": "insurance",
+      "level": "central",
+      "description": "Comprehensive crop insurance coverage to protect farmers against crop losses",
+      "eligibility": "All farmers (landowners and tenant farmers) for any crop",
+      "benefits": [
+        "Low insurance premium rates",
+        "Comprehensive coverage against natural disasters",
+        "Quick claim settlement",
+        "Easy registration through common service centers"
+      ],
+      "benefit": "Insurance coverage up to crop value + quick claim settlement",
+      "documents": [
+        "Aadhar/Voter ID",
+        "Land Certificate",
+        "FIR (in case of loss)",
+        "Crop cutting evidence"
+      ],
+      "deadline": "2024-06-30",
+      "contactPhone": "1800-102-0606",
+      "contactEmail": "pmfby@agriculture.gov.in",
+      "website": "https://pmfby.gov.in"
+    },
+    {
+      "id": 3,
+      "name": "Soil Health Card Scheme (SHC)",
+      "type": "training",
+      "level": "central",
+      "description": "Program providing regular soil testing and personalized nutrient recommendations for farmers",
+      "eligibility": "All farmers willing to get soil tested and follow recommendations",
+      "benefits": [
+        "Free soil testing at designated centers",
+        "Digital Soil Health Card with recommendations",
+        "Personalized nutrient management advice",
+        "Increased productivity through proper nutrient use"
+      ],
+      "benefit": "Free soil testing + personalized recommendations + digital card",
+      "documents": [
+        "Photo ID",
+        "Land document (optional)",
+        "Mobile number for SMS updates"
+      ],
+      "deadline": "Open",
+      "contactPhone": "1800-180-3900",
+      "contactEmail": "shc@agriculture.gov.in",
+      "website": "https://soilhealth.dac.gov.in"
+    },
+    {
+      "id": 4,
+      "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+      "type": "subsidy",
+      "level": "central",
+      "description": "Direct income support scheme providing cash transfer to all landholding farmers",
+      "eligibility": "All landholding farmers regardless of landholding size",
+      "benefits": [
+        "₹6,000 per year in 3 installments",
+        "Deposited directly in bank account",
+        "No paperwork or documentation required",
+        "Additional support during crop failure"
+      ],
+      "benefit": "₹6,000 per year in 3 equal installments directly to bank",
+      "documents": [
+        "Aadhar Card",
+        "Bank Account Details",
+        "Land Revenue Records",
+        "Mobile number linked to Aadhar"
+      ],
+      "deadline": "Open",
+      "contactPhone": "155261",
+      "contactEmail": "pmkisan@nic.in",
+      "website": "https://pmkisan.gov.in"
+    },
+    {
+      "id": 5,
+      "name": "Andhra Pradesh Irrigation Assistance Program",
+      "type": "loan",
+      "level": "state",
+      "description": "State-specific program providing financial assistance for irrigation development and modernization",
+      "eligibility": "Farmers in Andhra Pradesh with registered agricultural land",
+      "benefits": [
+        "Low-interest loans for irrigation infrastructure",
+        "Subsidy up to 50% on selected components",
+        "Technical guidance and training",
+        "Extended repayment period"
+      ],
+      "benefit": "Low-interest loans + 50% subsidy + technical training",
+      "documents": [
+        "Aadhar Card",
+        "Land ownership certificate",
+        "Income certificate",
+        "Bank passbook",
+        "Photographs of proposed work"
+      ],
+      "deadline": "2024-09-30",
+      "contactPhone": "040-XXXX-XXXX",
+      "contactEmail": "irrigation@ap.gov.in",
+      "website": "https://agriculture.ap.gov.in"
+    },
+    {
+      "id": 6,
+      "name": "Rajasthan Maize Improvement Program",
+      "type": "subsidy",
+      "level": "state",
+      "description": "State scheme promoting improved maize varieties and farming techniques",
+      "eligibility": "Farmers in Rajasthan cultivating or willing to cultivate maize",
+      "benefits": [
+        "Free seed supply of improved varieties",
+        "Training on modern farming techniques",
+        "Subsidy on fertilizers and pesticides",
+        "Market linkage assistance"
+      ],
+      "benefit": "Free seeds + 40% subsidy on inputs + training",
+      "documents": [
+        "Land record",
+        "Identity proof",
+        "Ration card",
+        "Bank account details"
+      ],
+      "deadline": "2024-08-15",
+      "contactPhone": "0141-XXXX-XXXX",
+      "contactEmail": "agriculture@rajasthan.gov.in",
+      "website": "https://agriculture.rajasthan.gov.in"
+    },
+    {
+      "id": 7,
+      "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "type": "subsidy",
+      "level": "central",
+      "description": "Organic farming promotion scheme encouraging traditional farming methods with modern technology",
+      "eligibility": "Groups of minimum 20-50 farmers with 50+ hectares for organic farming",
+      "benefits": [
+        "₹20,000 per hectare for 3 years",
+        "Organic certification support",
+        "Training and technical inputs",
+        "Market linkage for organic products"
+      ],
+      "benefit": "₹20,000/hectare for 3 years + certification + training",
+      "documents": [
+        "Group registration",
+        "Land records of all members",
+        "Bank account details",
+        "PAN/TAN details"
+      ],
+      "deadline": "2024-07-31",
+      "contactPhone": "1800-123-4567",
+      "contactEmail": "pkvy@agriculture.gov.in",
+      "website": "https://pkvy.agriculture.gov.in"
+    },
+    {
+      "id": 8,
+      "name": "Rashtriya Krishi Vikas Yojana (RKVY)",
+      "type": "subsidy",
+      "level": "central",
+      "description": "State-led scheme for development of agriculture and allied sectors",
+      "eligibility": "Individual farmers and farmer groups registered with state agriculture department",
+      "benefits": [
+        "Subsidy for agricultural infrastructure",
+        "Support for setting up agro-processing units",
+        "Funding for agricultural equipment",
+        "Market development assistance"
+      ],
+      "benefit": "Subsidy up to 50% for agricultural projects",
+      "documents": [
+        "Project proposal",
+        "Land document",
+        "Bank loan documents",
+        "Technical specifications"
+      ],
+      "deadline": "Open",
+      "contactPhone": "011-XXXX-XXXX",
+      "contactEmail": "rkvy@agriculture.gov.in",
+      "website": "https://rkvy.agriculture.gov.in"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-01-20",
+    "totalSchemes": 8,
+    "category": "Agricultural Support Schemes",
+    "disclaimer": "This information is for educational purposes. Always verify current details from official government sources."
+  }
+}

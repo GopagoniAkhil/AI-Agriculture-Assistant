@@ -1,0 +1,78 @@
+{
+  "prices": [
+    {
+      "id": 1,
+      "crop": "Potato",
+      "state": "Uttar Pradesh",
+      "currentPrice": 1800,
+      "averagePrice": 1650,
+      "minPrice": 1500,
+      "maxPrice": 2100,
+      "trend": 5.2,
+      "month": "January 2026"
+    },
+    {
+      "id": 2,
+      "crop": "Potato",
+      "state": "Punjab",
+      "currentPrice": 1750,
+      "averagePrice": 1600,
+      "minPrice": 1450,
+      "maxPrice": 2050,
+      "trend": 4.8,
+      "month": "January 2026"
+    },
+    {
+      "id": 3,
+      "crop": "Potato",
+      "state": "West Bengal",
+      "currentPrice": 1900,
+      "averagePrice": 1700,
+      "minPrice": 1550,
+      "maxPrice": 2200,
+      "trend": 6.1,
+      "month": "January 2026"
+    },
+    {
+      "id": 4,
+      "crop": "Tomato",
+      "state": "Karnataka",
+      "currentPrice": 3200,
+      "averagePrice": 2800,
+      "minPrice": 2400,
+      "maxPrice": 3800,
+      "trend": -2.5,
+      "month": "January 2026"
+    },
+    {
+      "id": 5,
+      "crop": "Tomato",
+      "state": "Maharashtra",
+      "currentPrice": 3100,
+      "averagePrice": 2900,
+      "minPrice": 2500,
+      "maxPrice": 3700,
+      "trend": -1.8,
+      "month": "January 2026"
+    },
+    {
+      "id": 6,
+      "crop": "Tomato",
+      "state": "Andhra Pradesh",
+      "currentPrice": 2950,
+      "averagePrice": 2700,
+      "minPrice": 2300,
+      "maxPrice": 3500,
+      "trend": -0.9,
+      "month": "January 2026"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2026-01-20",
+    "source": "Agricultural Ministry APMC Data",
+    "currency": "INR",
+    "unit": "per quintal",
+    "scope": "Educational Mini Project - Potato & Tomato Only",
+    "futureScope": "Rice, Wheat, Cotton, Sugarcane, Corn, Onion"
+  }
+}
