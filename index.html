@@ -4,41 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Agriculture Assistant - Smart Farming Decision Support System</title>
-
-    <!-- GitHub Pages base path fix -->
-    <base href="./">
-
-    <!-- Minimal fallback to ensure CSS visibility -->
-    <style>
-      body { visibility: visible; }
-    </style>
-
-    <!-- FIXED CSS PATH -->
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="css/styles.css">
     <!-- TensorFlow.js for ML Disease Detection -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.0.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
-
-    <!-- JavaScript Files -->
-    <script src="translations.js" defer></script>
-    <script src="voice.js" defer></script>
-    <script src="history.js" defer></script>
-    <script src="ml-disease-detection.js" defer></script>
-    <script src="main.js" defer></script>
+    <!-- ML Disease Detection Module -->
+    <script src="js/ml-disease-detection.js"></script>
+    <!-- Other Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/history.js"></script>
 </head>
-
 <body>
     <!-- Ethical Disclaimer Banner -->
     <div class="disclaimer-banner" id="disclaimerBanner">
         <div class="disclaimer-content">
             <span class="disclaimer-icon">⚠️</span>
-            <p>
-                <strong>Educational Disclaimer:</strong>
-                This AI Agriculture Assistant is designed for educational and demonstration purposes only.
-                AI recommendations are advisory and should not replace expert consultation.
-                Always verify with agricultural experts before making farming decisions.
-            </p>
+            <p><strong>Educational Disclaimer:</strong> This AI Agriculture Assistant is designed for educational and demonstration purposes only. AI recommendations are advisory and should not replace expert consultation. Always verify with agricultural experts before making farming decisions.</p>
             <button class="disclaimer-close" onclick="closeBanner()">✕</button>
         </div>
     </div>
@@ -51,29 +33,23 @@
                     <h1 class="logo">🌾 AI Agriculture Assistant</h1>
                     <p class="tagline">Smart Farming Decision Support System</p>
                 </div>
-
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active" onclick="navigateTo('home')">Home</a></li>
-                    <li><a href="#disease" class="nav-link" onclick="navigateTo('disease')">Disease Detection</a></li>
-                    <li><a href="#yield" class="nav-link" onclick="navigateTo('yield')">Yield Prediction</a></li>
-                    <li>
-                        <a href="#history" class="nav-link"
-                           onclick="navigateTo('history'); initializeHistorySection();">
-                            📊 History
-                        </a>
-                    </li>
-                    <li><a href="#schemes" class="nav-link" onclick="navigateTo('schemes')">Gov. Schemes</a></li>
+                    <li><a href="#home" class="nav-link active" data-i18n="home" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#disease" class="nav-link" data-i18n="diseaseDetection" onclick="navigateTo('disease')">Disease Detection</a></li>
+                    <li><a href="#yield" class="nav-link" data-i18n="yieldPrediction" onclick="navigateTo('yield')">Yield Prediction</a></li>
+                    <li><a href="#history" class="nav-link" data-i18n="predictionHistory" onclick="navigateTo('history'); initializeHistorySection();">📊 History</a></li>
+                    <li><a href="#schemes" class="nav-link" data-i18n="govSchemes" onclick="navigateTo('schemes')">Gov. Schemes</a></li>
                 </ul>
-
+                
                 <!-- Language Selector -->
                 <div class="language-selector">
-                    <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" class="language-dropdown">
                         <option value="en">English</option>
                         <option value="hi">हिंदी</option>
                         <option value="te">తెలుగు</option>
                     </select>
                 </div>
-
+                
                 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             </div>
         </nav>
@@ -83,24 +59,19 @@
         <!-- Home Section -->
         <section id="home" class="section active">
             <div class="container">
+                <!-- Welcome Greeting -->
                 <div class="welcome-greeting">
                     <h1>Welcome to AI Crop Disease Detection</h1>
-                    <p>
-                        Protect your crops with intelligent AI-powered disease detection
-                        and expert pesticide recommendations
-                    </p>
+                    <p>Protect your crops with intelligent AI-powered disease detection and expert pesticide recommendations</p>
                 </div>
 
+                <!-- Main Highlight: Disease Detection Banner -->
                 <div class="disease-highlight-banner">
                     <div class="highlight-content">
                         <div class="highlight-badge">🚨 PRIMARY FEATURE</div>
                         <h2>🔍 AI-Powered Crop Disease Detection</h2>
                         <h3>Detect Diseases Early & Get Pesticide Recommendations</h3>
-                        <p>
-                            Upload a leaf image to identify diseases and receive targeted
-                            pesticide recommendations to save your crops
-                        </p>
-
+                        <p>Upload a leaf image to identify diseases and receive targeted pesticide recommendations to save your crops</p>
                         <div class="highlight-features">
                             <div class="highlight-feature">
                                 <span class="highlight-icon">📸</span>
@@ -118,15 +89,36 @@
                                 <span>Learn prevention strategies & best practices</span>
                             </div>
                         </div>
-
-                        <a href="#disease" class="btn btn-primary btn-large"
-                           onclick="navigateTo('disease')">
-                            Try Disease Detection Now →
-                        </a>
+                        <a href="#disease" class="btn btn-primary btn-large" onclick="navigateTo('disease')">Try Disease Detection Now →</a>
                     </div>
-
                     <div class="highlight-image">
                         <div class="highlight-visual">🌾💚</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>How It Works</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Upload Data</h4>
+                            <p>Provide crop images or cultivation details</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>AI Analysis</h4>
+                            <p>Our AI processes your data instantly</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Get Insights</h4>
+                            <p>Receive actionable recommendations</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>Make Decisions</h4>
+                            <p>Take informed farming decisions</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,23 +127,60 @@
         <!-- Disease Detection Section -->
         <section id="disease" class="section disease-section">
             <div class="container">
-                <h2 class="section-title">
-                    🔍 Crop Disease Detection & Pesticide Recommendation
-                </h2>
+                <div class="section-header-highlight">
+                    <h2 class="section-title">🔍 Crop Disease Detection & Pesticide Recommendation</h2>
+                    <div class="section-subtitle">🚨 <strong>Primary Feature:</strong> Upload a leaf image for AI-based disease identification and get smart pesticide recommendations</div>
+                </div>
+
+                <div class="disease-quick-info">
+                    <div class="info-box">
+                        <span class="info-icon">✓</span>
+                        <strong>Accurate Detection</strong>
+                        <p>AI identifies 50+ common crop diseases</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-icon">💊</span>
+                        <strong>Pesticide Guidance</strong>
+                        <p>Get specific pesticide recommendations & dosage</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-icon">🛡️</span>
+                        <strong>Prevention Tips</strong>
+                        <p>Learn prevention methods & crop management</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-icon">⏱️</span>
+                        <strong>Early Detection</strong>
+                        <p>Catch diseases early before spreading</p>
+                    </div>
+                </div>
 
                 <div class="module-grid">
                     <div class="module-card disease-upload-card">
                         <h3>🌾 Upload Leaf Image</h3>
-                        <input type="file" id="imageInput" accept="image/*"
-                               onchange="handleImageUpload(event)">
-                        <img id="previewImage" class="image-preview hidden">
+                        <div class="upload-area" id="uploadArea">
+                            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
+                            <div class="upload-placeholder">
+                                <span class="upload-icon">📸</span>
+                                <p>Drag and drop your image here</p>
+                                <p class="small">or click to select</p>
+                            </div>
+                            <img id="previewImage" class="image-preview hidden" alt="Preview">
+                        </div>
                     </div>
 
                     <div class="module-card disease-results-card">
                         <h3>💊 Analysis & Pesticide Recommendation</h3>
-                        <div id="diseaseResults">
+                        <div id="diseaseResults" class="results-area">
                             <p class="placeholder-text">Upload an image to see analysis</p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="module-card full-width">
+                    <h3>Disease Database</h3>
+                    <div id="diseaseDatabase" class="disease-table">
+                        <p class="placeholder-text">Loading disease database...</p>
                     </div>
                 </div>
             </div>
@@ -161,41 +190,87 @@
         <section id="yield" class="section">
             <div class="container">
                 <h2 class="section-title">📊 Yield Prediction Calculator</h2>
+                <div class="section-subtitle">Predict your crop yield based on farming conditions</div>
 
-                <form id="yieldForm" onsubmit="predictYield(event)">
-                    <label>Crop Type</label>
-                    <select id="cropType" required>
-                        <option value="">Select Crop</option>
-                        <option value="potato">Potato</option>
-                        <option value="tomato">Tomato</option>
-                    </select>
+                <div class="module-grid">
+                    <div class="module-card">
+                        <h3>🌱 Prediction Inputs</h3>
+                        <form id="yieldForm" onsubmit="predictYield(event)">
+                            <div class="form-group">
+                                <label for="cropType">Crop Type</label>
+                                <select id="cropType" required>
+                                    <option value="">Select Crop</option>
+                                    <option value="potato">Potato</option>
+                                    <option value="tomato">Tomato</option>
+                                </select>
+                            </div>
 
-                    <label>Area (hectares)</label>
-                    <input type="number" id="area" step="0.1" required>
+                            <div class="form-group">
+                                <label for="area">Cultivation Area (hectares)</label>
+                                <input type="number" id="area" min="0.1" max="100" step="0.1" required placeholder="e.g., 2.5">
+                            </div>
 
-                    <label>Soil Quality</label>
-                    <select id="soilQuality">
-                        <option value="poor">Poor</option>
-                        <option value="average">Average</option>
-                        <option value="good">Good</option>
-                        <option value="excellent">Excellent</option>
-                    </select>
+                            <div class="form-group">
+                                <label for="soilQuality">Soil Quality</label>
+                                <select id="soilQuality" required>
+                                    <option value="poor">Poor</option>
+                                    <option value="average">Average</option>
+                                    <option value="good">Good</option>
+                                    <option value="excellent">Excellent</option>
+                                </select>
+                            </div>
 
-                    <button class="btn btn-primary">Calculate Yield</button>
-                </form>
+                            <div class="form-group">
+                                <label for="waterAvailability">Water Availability</label>
+                                <select id="waterAvailability" required>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
 
-                <div id="yieldResults">
-                    <p class="placeholder-text">Results will appear here</p>
+                            <div class="form-group">
+                                <label for="sunlight">Sunlight Hours (0-24)</label>
+                                <input type="number" id="sunlight" min="0" max="24" step="0.5" required placeholder="e.g., 8">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Calculate Yield</button>
+                        </form>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>📈 Prediction Results</h3>
+                        <div id="yieldResults" class="results-area">
+                            <p class="placeholder-text">Fill the form and click Calculate to see predictions</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- History Section -->
+        <!-- Prediction History Section -->
         <section id="history" class="section">
             <div class="container">
                 <h2 class="section-title">📋 Prediction History</h2>
-                <div id="historyTable">
-                    <p class="placeholder-text">No history available</p>
+                <div class="section-subtitle">Track and analyze your yield predictions over time</div>
+
+                <div class="module-card">
+                    <h3>📊 Statistics Overview</h3>
+                    <div id="historyStats" class="stats-area">
+                        <p class="placeholder-text">Statistics will appear after you make predictions</p>
+                    </div>
+                </div>
+
+                <div class="module-card full-width">
+                    <h3>📅 Prediction History</h3>
+                    <div class="history-actions" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn btn-secondary" onclick="exportHistoryAsCSV()" title="Export as CSV">📥 Export CSV</button>
+                        <button class="btn btn-secondary" onclick="exportHistoryAsJSON()" title="Export as JSON">📥 Export JSON</button>
+                        <button class="btn btn-danger" onclick="if(confirm('Clear all predictions?')) { clearPredictionHistory(); initializeHistorySection(); }" title="Clear history">🗑️ Clear History</button>
+                    </div>
+                    <div id="historyTable" class="history-container">
+                        <p class="placeholder-text">No predictions yet. Make your first yield prediction to see it here!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -204,15 +279,70 @@
         <section id="schemes" class="section">
             <div class="container">
                 <h2 class="section-title">📋 Government Agricultural Schemes</h2>
-                <div id="schemesList">
-                    <p class="placeholder-text">Loading schemes...</p>
+                <div class="section-subtitle">Discover schemes you're eligible for</div>
+
+                <div class="module-card">
+                    <h3>Filter by Criteria</h3>
+                    <form id="schemeFilter">
+                        <div class="filter-group">
+                            <label for="schemeType">Scheme Type</label>
+                            <select id="schemeType" onchange="filterSchemes()">
+                                <option value="">All Types</option>
+                                <option value="subsidy">Subsidy</option>
+                                <option value="loan">Loan</option>
+                                <option value="insurance">Insurance</option>
+                                <option value="training">Training</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="schemeLevel">Scheme Level</label>
+                            <select id="schemeLevel" onchange="filterSchemes()">
+                                <option value="">All Levels</option>
+                                <option value="central">Central</option>
+                                <option value="state">State</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="schemesList" class="schemes-container">
+                    <p class="placeholder-text">Loading government schemes...</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 AI Agriculture Assistant | Educational Use Only</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>AI Agriculture Assistant helps farmers make data-driven decisions for better crop management and productivity.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#disease">Disease Detection</a></li>
+                        <li><a href="#schemes">Gov. Schemes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p>This system is for educational purposes. Always consult experts before making farming decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@aiagritech.com</p>
+                    <p>Support: support@aiagritech.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Agriculture Assistant. All rights reserved. | Educational Use Only</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
