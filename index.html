@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Agriculture Assistant - Smart Farming Decision Support System</title>
 
-    <!-- ✅ FIXED CSS PATH (NO LOGIC CHANGE) -->
+    <!-- GitHub Pages base path fix -->
+    <base href="./">
+
+    <!-- Minimal fallback to ensure CSS visibility -->
+    <style>
+      body { visibility: visible; }
+    </style>
+
+    <!-- FIXED CSS PATH -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- TensorFlow.js for ML Disease Detection -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.0.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
 
-    <!-- ✅ FIXED JS PATHS (SAME FILES, SAME ORDER) -->
+    <!-- JavaScript Files -->
     <script src="translations.js" defer></script>
     <script src="voice.js" defer></script>
     <script src="history.js" defer></script>
